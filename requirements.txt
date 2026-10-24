@@ -1,2 +1,6 @@
 python-telegram-bot
 httpx
+python-telegram-bot
+httpx
+python-docx
+pillow
