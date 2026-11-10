@@ -80,7 +80,7 @@ logger = logging.getLogger("HorticultureMasterPrime")
 
 ADMIN_ID = 5183668353
 ADMIN_USERNAME = "Akash_dwivedii"          # official admin handle
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "AQ.Ab8RN6I1ZnqqPxKPgDmO6Gd1spUJo3M3Q-uF7_aCPmigo9fvsg")
 
 CHANNEL_USERNAME = "@Horticulturemaster"
 CHANNEL_LINK = "https://t.me/Horticulturemaster"
