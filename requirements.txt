@@ -4,3 +4,5 @@ python-docx
 pillow
 anthropic
 google-generativeai
+PyPDF2
+pytesseract
