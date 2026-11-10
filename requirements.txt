@@ -3,3 +3,5 @@ httpx
 python-docx
 pillow
 anthropic
+google-genai
+python-dotenv
