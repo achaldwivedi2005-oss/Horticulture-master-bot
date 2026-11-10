@@ -3359,12 +3359,16 @@ async def generate_ai_quiz(uid, topic, count, context, chat_id):
         # try next backup key once
         keys = system_data.get("gemini_api_keys") or []
         rotated = False
-        if len(keys) > 1:
-            keys = keys[1:] + keys[:1]
-            system_data["gemini_api_keys"] = keys
-            system_data["gemini_api_key"] = keys[0]
-                needs_save = True
-            rotated = True
+            if len(keys) > 1:
+        # पहली की (key) को हटाकर लिस्ट के आखिरी में डालना
+        first_key = keys.pop(0)
+        keys.append(first_key)
+        
+        system_data["gemini_api_keys"] = keys
+        system_data["gemini_api_key"] = keys[0]  # यहाँ ध्यान रखें, 0th इंडेक्स ही एक्टिव की होगी
+        needs_save = True
+        rotated = True
+
         try:
             msg = f"❌ *AI generation failed*\n\n`{str(e)[:180]}`\n\n"
             if rotated:
